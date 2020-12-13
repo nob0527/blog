@@ -1,7 +1,17 @@
+import React from "react";
+
+import Navbar from "./components/Navbar";
+import BlogList from "./components/BlogList";
+import LatestCard from "./components/LatestCard";
+
+
 function App() {
   return (
     <div >
-      Blog App
+      <Navbar/>
+      
+      <BlogList/>
+      <LatestCard/>
     </div>
   );
 }
