@@ -1,0 +1,10 @@
+.navbar_container{
+    background-color: #137913;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar_container h1{
+    color: white;
+}

@@ -10,8 +10,12 @@ function App() {
     <div >
       <Navbar/>
       
-      <BlogList/>
-      <LatestCard/>
+        <div className={"content_container"}>
+            <BlogList/>
+           <div >
+                <LatestCard/>
+           </div>
+        </div>
     </div>
   );
 }
