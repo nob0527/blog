@@ -10,7 +10,7 @@ function BlogCard({blog_data}) {
             <div className={"blog_card_body"}>{blog_data.card_body}</div>
 
             <div className={"blog_card_footer"}>
-                <small>{blog_data.author}</small>
+                <small>{blog_data.author.first_name} {blog_data.author.last_name}</small>
                 <small>{blog_data.created}</small>
                 <Link to={"/details"}>Read more...</Link>
             </div>
