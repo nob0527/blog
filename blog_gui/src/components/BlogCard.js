@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "../styles/blog_card.css"
 
 function BlogCard({blog_data}) {
@@ -11,7 +12,7 @@ function BlogCard({blog_data}) {
             <div className={"blog_card_footer"}>
                 <small>{blog_data.author}</small>
                 <small>{blog_data.created}</small>
-                <a href="">Read more...</a>
+                <Link to={"/details"}>Read more...</Link>
             </div>
 
         </div>

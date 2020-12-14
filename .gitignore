@@ -24,3 +24,9 @@ yarn-error.log*
 
 # Pycharm
 .idea/
+
+#Paython
+venv/
+
+#Django
+db.sqlite3

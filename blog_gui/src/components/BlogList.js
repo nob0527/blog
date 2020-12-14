@@ -1,13 +1,13 @@
 import React from 'react';
 import BlogCard from "./BlogCard";
-import {MockData} from "../MockData";
+import {Mock_BlogList} from "../Mock_BlogList";
 
 function BlogList(props) {
 
     return (
         <div>
             {
-                MockData.map(data => <BlogCard key={data.id} blog_data={data}/>)
+                Mock_BlogList.map(data => <BlogCard key={data.id} blog_data={data}/>)
             }
         </div>
     );

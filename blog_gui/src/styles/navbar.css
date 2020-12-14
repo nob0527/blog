@@ -8,3 +8,7 @@
 .navbar_container h1{
     color: white;
 }
+
+.navbar_container a{
+    text-decoration: none;
+}
