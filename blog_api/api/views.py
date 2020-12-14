@@ -1,9 +1,8 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework.generics import ListAPIView
+from .models import Post
+from .serializers import PostListSerializer
 
 
-class BlogList(APIView):
-    def get(self, request):
-        return Response(
-            {"msg": "Thins is the blog endpoint"}
-        )
+class BlogList(ListAPIView):
+    queryset = Post.objects.order_by("-created")
+    serializer_class = PostListSerializer
