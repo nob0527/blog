@@ -2,8 +2,12 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Mock_BlogDetails} from "../Mock_BlogDetails";
 import "../styles/blog_details.css"
+import {useParams} from "react-router-dom"
 
 function BlogDetails(props) {
+
+    const {slug} = useParams()
+
 
     const {
         title,

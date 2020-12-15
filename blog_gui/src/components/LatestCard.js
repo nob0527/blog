@@ -1,9 +1,8 @@
 import React from 'react';
-import {Mock_BlogList} from "../Mock_BlogList";
 import {Link} from "react-router-dom";
 import "../styles/latest_card.css"
 
-function LatestCard(props) {
+function LatestCard({posts}) {
     return (
         <div className={"latest_card_container"}>
             <div className={"latest_header"}>
@@ -12,9 +11,9 @@ function LatestCard(props) {
 
             <div className={"latest_body"}>
                 {
-                    Mock_BlogList.map(data =>
+                    posts.filter((item, index) => index < 5).map(data =>
                         <div className={"latest_title"} key={data.id}>
-                            <Link to={"/details"}>{data.title}</Link>
+                            <Link to={"/post/" + data.slug}>{data.title}</Link>
                         </div>
                     )
                 }

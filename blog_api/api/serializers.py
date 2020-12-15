@@ -10,7 +10,7 @@ class AuthorSerializer(serializers.ModelSerializer):
             "first_name",
             "last_name",
             "username",
-            "email"
+            "email",
         ]
 
 
@@ -25,5 +25,23 @@ class PostListSerializer(serializers.ModelSerializer):
             "title",
             "card_body",
             "author",
-            "created"
+            "created",
+            "slug"
+        ]
+
+
+class PostDetailsSerializer(serializers.ModelSerializer):
+    created = serializers.DateTimeField(format="%Y %b. %d %H:%M", read_only=True)
+    author = AuthorSerializer()
+
+    class Meta:
+        model = Post
+        fields = [
+            "id",
+            "title",
+            "card_body",
+            "body",
+            "author",
+            "created",
+            "slug"
         ]
